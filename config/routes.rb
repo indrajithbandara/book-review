@@ -3,11 +3,13 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   # root 'home#index'
 
-  resources :books, except: [:new, :show]
+  resources :books, except: [:new, :show, :edit, :update]
   root 'books#index'
   get '/new/book', to: 'books#new', as: 'new_book'
   get '/book/:id', to: 'books#show', as: 'show_book'
- 
+  get '/book/:id/edit', to: 'books#edit', as: 'edit_book'
+  patch '/book/:id/edit', to: 'books#update', as: 'update_book'
+
 	devise_scope :user do
     get "/register" => "devise/registrations#new", as: "new_user_registration" # custom path to sign_up/registration
   end

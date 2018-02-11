@@ -35,8 +35,7 @@ gem 'bootstrap'
 gem 'bootswatch'
 gem 'jquery-rails'
 gem 'devise'
-
-
+ 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'

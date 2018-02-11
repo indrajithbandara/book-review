@@ -1,4 +1,4 @@
-/*flash*/
+ /*flash*/
 .alert-error {
     background-color: red;
     border-color: #eed3d7;
@@ -39,6 +39,14 @@ body {
 
 .content {
 	margin-top: 50px;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    background-color: lightblue;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+    background-color: lightblue;
 }
 
 

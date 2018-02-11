@@ -1,0 +1,18 @@
+<section>
+	<p><%= @book.title %></p>	
+	<p><%= @book.author %></p>	
+	<p>Category : <%= @book.category.name %></p>	
+	<p><%= @book.description %></p>	
+	<p>
+		Posted by 
+		<%= @book.user.email %> on <%= @book.updated_at.strftime("%B %e, %Y at %I:%M %p") %>		
+	</p>
+</section>
+<hr>
+
+<% if user_signed_in? %>
+	<% if current_user.id == @book.user_id %>
+		<%= link_to "Edit #{@book.title}", edit_book_path(@book) %>
+		<%= link_to "Delete #{@book.title}", book_path(@book), method: :delete, data: { confirm: "Are you sure?" } %>
+	<% end %>
+<% end %>
