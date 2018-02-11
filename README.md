@@ -2,10 +2,14 @@
 
 This is is the app made during the [tuto](https://www.youtube.com/watch?v=AMai9EZesXY)
 
-This app has the following features :
+[Demo app on Heroku](https://rails-book-reviews.herokuapp.com)
 
-* Heroku ready
+This app has the following features :
 
 * Bootstrap - Bootswatch
 
-* Devise
+* Auth with Devise
+
+* Image upload with paperclip gem
+
+* Heroku ready of course

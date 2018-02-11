@@ -16,9 +16,8 @@ class Book < ApplicationRecord
     message: "only allows letters" }, length: { minimum: 3, maximum:255 }
 
   validates :category_id, presence: true
-  # SEO Friendly url from the id to the title 
-  # def to_param  # overridden https://apidock.com/rails/ActiveRecord/Base/to_param
-  #   title
-  # end  
+  
+  has_attached_file :book_image, styles: { book_index: "250x350>", book_index: "325x475>" }, default_url: "/images/:style/missing.png"
+  validates_attachment_content_type :book_image, content_type: /\Aimage\/.*\z/  
 
 end
