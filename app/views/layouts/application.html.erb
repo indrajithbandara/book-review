@@ -3,7 +3,8 @@
   <%= render 'includes/head' %>
   <body>
   	<%= render 'includes/top_navigation' %>
-  	<div class="container">
+  	<%= render 'includes/flash_messages' %>
+  	<div class="container content">
     	<%= yield %>
     </div>	
   </body>

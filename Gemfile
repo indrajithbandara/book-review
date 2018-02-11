@@ -34,6 +34,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap'
 gem 'bootswatch'
 gem 'jquery-rails'
+gem 'devise'
 
 
 group :development, :test do
@@ -44,6 +45,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'dotenv'
 end
 
 group :development do

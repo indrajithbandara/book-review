@@ -1,1 +1,17 @@
 <h1>Books index</h1>
+ 	<a href="<%= new_book_path %>" class="btn btn-block btn-primary">
+ 		Add a new book
+ 	</a>
+<hr>
+<% if @books %>
+	<% @books.each do |book| %>
+	 <a href="<%= show_book_path(book) %>">
+	 	<%= book.title %>
+	 </a>
+	<% end %>
+<% else %>
+ <p>
+ 	No books
+ 	<a href="<%= new_book_path %>">Add a new book</a>
+ </p> 
+<% end %>
