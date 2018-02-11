@@ -6,7 +6,7 @@
           <h4 class="card-title text-center my-3">Register</h4>
            <hr>
             <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-            <%= render 'includes/devise_errors' %>
+             <%= devise_error_messages! %> 
               <div class="container">
               <div class="form-group">
                 <%= f.label :email %><br />

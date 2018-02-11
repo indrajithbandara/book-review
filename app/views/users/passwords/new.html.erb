@@ -6,8 +6,8 @@
           <h4 class="card-title text-center my-3">Forgot your password?</h4>
            <hr>
 						<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-						    <%= render 'includes/devise_errors' %>
-
+              <%= devise_error_messages! %> 
+              <div class="container">
 						  <div class="form-group">
 						    <%= f.label :email %><br />
 						    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
@@ -21,6 +21,7 @@
 						<div class="text-center">
             <%= render "users/shared/links" %>
             </div>
+             </div>
           </div>
         </div>
       </div>
